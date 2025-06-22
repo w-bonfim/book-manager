@@ -6,6 +6,13 @@
     <title>@yield('title', 'Book Manager')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     @yield('styles')
+    <style>
+        .btn-logout {
+            display: inline;
+            cursor: pointer;
+            margin-left: 80px;
+         }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
@@ -20,10 +27,11 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('books.index') }}">Livros</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('authors.index') }}">Autores</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('subjects.index') }}">Assuntos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('reports.books') }}">Relatórios</a></li>
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="POST" class="d-inline">
                             @csrf
-                            <button type="submit" class="btn btn-link nav-link" style="display:inline;cursor:pointer;">Sair</button>
+                            <button type="submit" class="btn btn-link nav-link btn-logout">Sair</button>
                         </form>
                     </li>
                 </ul>
