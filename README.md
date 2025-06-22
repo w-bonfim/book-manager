@@ -62,6 +62,25 @@ php artisan test
 
 - **Login:** admin@bookmanager.com
 - **Senha:** 123
+- 
+## Telas do Sistema
+- **Login**
+![image](https://github.com/user-attachments/assets/91d29fa6-86ff-442f-8fb0-98c92413aeb4)
+
+- **Livros**
+![image](https://github.com/user-attachments/assets/92fc52cf-3aaa-43fb-8b98-c9e35a69f802)
+
+ **Cadastro de Livros**
+![image](https://github.com/user-attachments/assets/88a30abf-411a-4b82-b8d1-1f2f48b33831)
+
+ **Autores**
+![image](https://github.com/user-attachments/assets/f2bb71dd-cf0e-4e74-b8a0-445e84f0eeda)
+
+ **Assuntos**
+![image](https://github.com/user-attachments/assets/7f3b625b-e1c2-493b-8e3e-d73dd5442628)
+
+**Exportação para Excel**
+![image](https://github.com/user-attachments/assets/1fbc0454-6330-492d-82f4-beece27044fc)
 
 ## Tecnologias
 
