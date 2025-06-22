@@ -14,9 +14,10 @@ return new class extends Migration
         DB::statement("
             CREATE VIEW view_report_book AS
             SELECT
+                books.id,
                 books.title AS livro,
-                GROUP_CONCAT(DISTINCT authors.name, ', ') AS autores,
-                GROUP_CONCAT(DISTINCT subjects.description, ', ') AS assuntos
+                GROUP_CONCAT(DISTINCT authors.name) AS autores,
+                GROUP_CONCAT(DISTINCT subjects.description) AS assuntos
             FROM books
             LEFT JOIN book_author ON books.id = book_author.book_id
             LEFT JOIN authors ON book_author.author_id = authors.id
