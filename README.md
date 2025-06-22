@@ -1,14 +1,14 @@
-
 # Book Manager
 
 Book Manager é um sistema web desenvolvido em Laravel para cadastro, gerenciamento e consulta de livros, autores e assuntos.
 
 ## Funcionalidades
-- Autenticação de usuários (Laravel Breeze)
+- Autenticação de usuários
 - Cadastro, edição e exclusão de livros
 - Cadastro, edição e exclusão de autores
 - Cadastro, edição e exclusão de assuntos
 - Associação de múltiplos autores e assuntos a cada livro
+- Relatório de livros com exportação para Excel
 - Interface responsiva com Bootstrap
 
 ## Instalação
@@ -38,15 +38,30 @@ Book Manager é um sistema web desenvolvido em Laravel para cadastro, gerenciame
    php artisan migrate
    ```
 
-6. (Opcional) Popule o banco com seeders:
+6. **Popule o banco com seeders obrigatoriamente para acessar o sistema:**
    ```sh
    php artisan db:seed
    ```
+
+   > **Importante:** Para acessar o sistema, é necessário rodar o comando acima para criar o usuário administrador padrão.
 
 7. Inicie o servidor:
    ```sh
    php artisan serve
    ```
+
+## Testes
+
+Para rodar os testes automatizados do projeto, utilize:
+
+```sh
+php artisan test
+```
+
+## Acesso ao sistema
+
+- **Login:** admin@bookmanager.com
+- **Senha:** 123
 
 ## Tecnologias
 
@@ -54,5 +69,4 @@ Book Manager é um sistema web desenvolvido em Laravel para cadastro, gerenciame
 - PHP 8+
 - Bootstrap 5
 - MySQL
-- Laravel Breeze (autenticação)
 
