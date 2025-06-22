@@ -14,13 +14,21 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            @auth
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="{{ route('books.index') }}">Livros</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('authors.index') }}">Autores</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('subjects.index') }}">Assuntos</a></li>
+                    <li class="nav-item">
+                        <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                            @csrf
+                            <button type="submit" class="btn btn-link nav-link" style="display:inline;cursor:pointer;">Sair</button>
+                        </form>
+                    </li>
                 </ul>
             </div>
+            @endauth
         </div>
     </nav>
     <main class="container">
